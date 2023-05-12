@@ -1,24 +1,28 @@
-const difficultyElement = document.querySelector(".difficulty");
+import { renderingDifficulty } from "./components/difficulty-component.js";
+import { renderingPresetsCards } from "./components/presets-cards-component.js";
 
-difficultyElement.innerHTML = `
-<h1 class="difficulty__title">Выбери сложность</h1>
-<div class="difficulty__choose">
-    <button class="difficulty__chooseButton">1</button>
-    <button class="difficulty__chooseButton">2</button>
-    <button class="difficulty__chooseButton">3</button>
-</div>
-<button class="difficulty__buttonStart">Старт</button>
-`
+const mainElement = document.getElementById("main");
+let difficultySelection;
 
-const chooseButtonElements = document.querySelectorAll(".difficulty__chooseButton")
-const startButtonElement = document.querySelector(".difficulty__buttonStart")
+renderingDifficulty();
 
-startButtonElement.addEventListener("click", () => {
-    console.log("work");
-})
+function checkButtonDifficulty() {
+    const chooseButtonElements = document.querySelectorAll(".difficulty__chooseButton");
+    const startButtonElement = document.querySelector(".difficulty__buttonStart");
 
-for (const chooseButtonElement of chooseButtonElements) {
-    chooseButtonElement.addEventListener("click", () => {
-        console.log("work");
+    for (const chooseButtonElement of chooseButtonElements) {
+        chooseButtonElement.addEventListener("click", () => {
+            difficultySelection = chooseButtonElement.textContent;
+        })
+    }
+
+    startButtonElement.addEventListener("click", () => {
+        if (!difficultySelection) {
+            alert("С начало выберете сложность");
+            return;
+        }
+        renderingPresetsCards(document.querySelector(".difficulty"), difficultySelection);
     })
 }
+
+export { mainElement, checkButtonDifficulty }
