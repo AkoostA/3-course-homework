@@ -1,7 +1,7 @@
-import { mainElement, checkButtonDifficulty } from "../index.js"
+import { renderingPresetsCards } from "./presets-cards-component.js"
 
 function renderingDifficulty() {
-    mainElement.innerHTML = `
+    window.globalThis.mainElement.innerHTML = `
 <section class="difficulty">
 <h1 class="difficulty__title">Выбери сложность</h1>
 <div class="difficulty__choose">
@@ -16,5 +16,43 @@ function renderingDifficulty() {
 checkButtonDifficulty();
 }
 
+function checkButtonDifficulty() {
+    const chooseButtonElements = document.querySelectorAll(".difficulty__chooseButton");
+    const startButtonElement = document.querySelector(".difficulty__buttonStart");
+
+    for (const chooseButtonElement of chooseButtonElements) {
+        chooseButtonElement.addEventListener("click", () => {
+            for (const chooseButtonElement of chooseButtonElements) {
+                chooseButtonElement.classList.remove("-button-active")
+            }
+            window.globalThis.difficulty = chooseButtonElement.textContent;
+            chooseButtonElement.classList.add("-button-active")
+            switch (window.globalThis.difficulty) {
+                case "1":
+                    window.globalThis.difficulty = "easy"
+                    window.globalThis.cards = "6 карточек (3 пары)";
+                    break;
+                case "2":
+                    window.globalThis.difficulty = "average"
+                    window.globalThis.cards = "12 карточек (6 пар)";
+                    break;
+                case "3":
+                    window.globalThis.difficulty = "hard"
+                    window.globalThis.cards = "18 карточек (9 пар)";
+                    break;
+                default:
+                    break;
+            }
+        })
+    }
+
+    startButtonElement.addEventListener("click", () => {
+        if (!window.globalThis.difficulty) {
+            alert("С начало выберете сложность");
+            return;
+        }
+        renderingPresetsCards();
+    })
+}
 
 export { renderingDifficulty }
