@@ -64,4 +64,8 @@ body {
 .difficulty__buttonStart:hover {
   opacity: 0.5;
   border-style: outset;
+}
+
+.-button-active {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
 }/*# sourceMappingURL=styles.css.map */

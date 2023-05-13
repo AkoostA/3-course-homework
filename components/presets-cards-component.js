@@ -1,22 +1,24 @@
 import { renderingDifficulty } from "./difficulty-component.js"
+import { mainElement, globalData } from "../index.js"
 
-function renderingPresetsCards(difficultyElement, difficultySelection) {
-    switch (difficultySelection) {
-        case "1":
-            difficultyElement.innerHTML = `
-            <h1 class="difficulty__title">Легкий уровень - 6 карточек (3 пары)</h1>
+
+function renderingPresetsCards() {
+    switch (globalData.difficulty) {
+        case "easy":
+            mainElement.innerHTML = `
+            <h1>ЗДЕСЬ БУДЕТ ЛЕГКИЙ УРОВЕНЬ СЛОЖНОСТИ</h1>
             <button class="difficulty__buttonStart">Назад</button>
             `
             break;
-        case "2":
-            difficultyElement.innerHTML = `
-            <h1 class="difficulty__title">Средний уровень - 12 карточек (6 пар)</h1>
+        case "average":
+            mainElement.innerHTML = `
+            <h1>ЗДЕСЬ БУДЕТ СРЕДНИЙ УРОВЕНЬ СЛОЖНОСТИ</h1>
             <button class="difficulty__buttonStart">Назад</button>
             `
             break;
-        case "3":
-            difficultyElement.innerHTML = `
-            <h1 class="difficulty__title">Сложный уровень - 18 карточек (9 пар)</h1>
+        case "hard":
+            mainElement.innerHTML = `
+            <h1>ЗДЕСЬ БУДЕТ ВЫСОКИЙ УРОВЕНЬ СЛОЖНОСТИ</h1>
             <button class="difficulty__buttonStart">Назад</button>
             `
             break;
