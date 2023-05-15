@@ -25,9 +25,8 @@ function checkButtonDifficulty() {
             for (const chooseButtonElement of chooseButtonElements) {
                 chooseButtonElement.classList.remove("-button-active")
             }
-            window.globalThis.difficulty = chooseButtonElement.textContent;
             chooseButtonElement.classList.add("-button-active")
-            switch (window.globalThis.difficulty) {
+            switch (chooseButtonElement.textContent) {
                 case "1":
                     window.globalThis.difficulty = "easy"
                     window.globalThis.cards = "6 карточек (3 пары)";
