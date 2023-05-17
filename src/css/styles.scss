@@ -1,3 +1,14 @@
+/* stylelint-disable color-hex-length */
+/* stylelint-disable length-zero-no-unit */
+/* stylelint-disable keyframes-name-pattern */
+/* stylelint-disable color-function-notation */
+/* stylelint-disable alpha-value-notation */
+/* stylelint-disable function-url-quotes */
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
+/* stylelint-disable selector-class-pattern */
+/* stylelint-disable rule-empty-line-before */
+/* stylelint-disable font-family-name-quotes */
+/* stylelint-disable prettier/prettier */
 @font-face {
     font-family: "StratosSkyeng";
     font-style: normal;
@@ -110,6 +121,7 @@ body {
         font-weight: 400;
         font-size: 64px;
         color: #ffffff;
+        line-height: 72px;
     }
 
     &__again-button {

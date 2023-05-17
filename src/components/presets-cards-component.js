@@ -2,14 +2,14 @@ import { renderingDifficulty } from "./difficulty-component.js";
 
 const gameTitleElement = `
 <div class="game__title">
-<div class="game__time-box">
-    <div class="game__text-box">
-        <p class="game__text">min</p>
-        <p class="game__text">sek</p>
-    </div>
+    <div class="game__time-box">
+        <div class="game__text-box">
+            <p class="game__text">min</p>
+            <p class="game__text">sek</p>
+        </div>
         <p class="game__time">00.00</p>
     </div>
-<button class="game__again-button">Начать заново</button>
+    <button class="game__again-button">Начать заново</button>
 </div>
 `;
 
