@@ -1,7 +1,7 @@
 import { renderingDifficulty } from "./components/difficulty-component.js";
 
-globalThis = {
+window.globalThis = {
     mainElement: document.getElementById("main"),
-}
+};
 
 renderingDifficulty();

@@ -1,4 +1,4 @@
-import { renderingPresetsCards } from "./presets-cards-component.js"
+import { renderingPresetsCards } from "./presets-cards-component.js";
 
 function renderingDifficulty() {
     window.globalThis.mainElement.innerHTML = `
@@ -11,38 +11,39 @@ function renderingDifficulty() {
 </div>
 <button class="difficulty__buttonStart">Старт</button>
 </section>
-`
+`;
 
-checkButtonDifficulty();
+    checkButtonDifficulty();
 }
 
 function checkButtonDifficulty() {
-    const chooseButtonElements = document.querySelectorAll(".difficulty__chooseButton");
-    const startButtonElement = document.querySelector(".difficulty__buttonStart");
+    const chooseButtonElements = document.querySelectorAll(
+        ".difficulty__chooseButton"
+    );
+    const startButtonElement = document.querySelector(
+        ".difficulty__buttonStart"
+    );
 
     for (const chooseButtonElement of chooseButtonElements) {
         chooseButtonElement.addEventListener("click", () => {
             for (const chooseButtonElement of chooseButtonElements) {
-                chooseButtonElement.classList.remove("-button-active")
+                chooseButtonElement.classList.remove("-button-active");
             }
-            chooseButtonElement.classList.add("-button-active")
+            chooseButtonElement.classList.add("-button-active");
             switch (chooseButtonElement.textContent) {
                 case "1":
-                    window.globalThis.difficulty = "easy"
-                    window.globalThis.cards = "6 карточек (3 пары)";
+                    window.globalThis.difficulty = "easy";
                     break;
                 case "2":
-                    window.globalThis.difficulty = "average"
-                    window.globalThis.cards = "12 карточек (6 пар)";
+                    window.globalThis.difficulty = "average";
                     break;
                 case "3":
-                    window.globalThis.difficulty = "hard"
-                    window.globalThis.cards = "18 карточек (9 пар)";
+                    window.globalThis.difficulty = "hard";
                     break;
                 default:
                     break;
             }
-        })
+        });
     }
 
     startButtonElement.addEventListener("click", () => {
@@ -51,7 +52,7 @@ function checkButtonDifficulty() {
             return;
         }
         renderingPresetsCards();
-    })
+    });
 }
 
-export { renderingDifficulty }
+export { renderingDifficulty };
