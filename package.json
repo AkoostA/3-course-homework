@@ -10,7 +10,7 @@
         "lint:js": "eslint ./src/**/*.js",
         "lint:scss": "stylelint ./src/**/*.scss",
         "prepare": "husky install",
-        "lint": "npm run format && npm run lint:js && npm run lint:css"
+        "lint": "npm run format && npm run lint:js && npm run lint:scss"
     },
     "keywords": [],
     "author": "AkoostA",
