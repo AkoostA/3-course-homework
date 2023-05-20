@@ -13,7 +13,7 @@
 @font-face {
     font-family: "StratosSkyeng";
     font-style: normal;
-    src: url(../../fonts/stratosskyeng-regular.otf);
+    src: url(../fonts/stratosskyeng-regular.otf);
 }
 * {
     margin: 0;
@@ -130,13 +130,13 @@ body {
 }
 .game__cards {
     display: grid;
-    grid-template-columns: repeat(9, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 15px;
 }
 .game__cards-button {
     width: 95px;
     height: 133px;
-    background-image: url(../../img/рубашка.jpg);
+    background-image: url(../img/рубашка.jpg);
     border-radius: 4px;
     border-style: none;
 }
@@ -146,6 +146,116 @@ body {
 
 .-button-active {
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+}
+
+.preset__spadesA {
+    background-image: url(../img/spades/A\ spades.png);
+}
+.preset__spadesK {
+    background-image: url(../img/spades/K\ spades.png);
+}
+.preset__spadesQ {
+    background-image: url(../img/spades/Q\ spades.png);
+}
+.preset__spadesJ {
+    background-image: url(../img/spades/J\ spades.png);
+}
+.preset__spades10 {
+    background-image: url(../img/spades/10\ spades.png);
+}
+.preset__spades9 {
+    background-image: url(../img/spades/9\ spades.png);
+}
+.preset__spades8 {
+    background-image: url(../img/spades/8\ spades.png);
+}
+.preset__spades7 {
+    background-image: url(../img/spades/7\ spades.png);
+}
+.preset__spades6 {
+    background-image: url(../img/spades/6\ spades.png);
+}
+.preset__heartsA {
+    background-image: url(../img/hearts/A\ hearts.png);
+}
+.preset__heartsK {
+    background-image: url(../img/hearts/K\ hearts.png);
+}
+.preset__heartsQ {
+    background-image: url(../img/hearts/Q\ hearts.png);
+}
+.preset__heartsJ {
+    background-image: url(../img/hearts/J\ hearts.png);
+}
+.preset__hearts10 {
+    background-image: url(../img/hearts/10\ hearts.png);
+}
+.preset__hearts9 {
+    background-image: url(../img/hearts/9\ hearts.png);
+}
+.preset__hearts8 {
+    background-image: url(../img/hearts/8\ hearts.png);
+}
+.preset__hearts7 {
+    background-image: url(../img/hearts/7\ hearts.png);
+}
+.preset__hearts6 {
+    background-image: url(../img/hearts/6\ hearts.png);
+}
+.preset__diamondsA {
+    background-image: url(../img/diamonds/A\ diamonds.png);
+}
+.preset__diamondsK {
+    background-image: url(../img/diamonds/K\ diamonds.png);
+}
+.preset__diamondsQ {
+    background-image: url(../img/diamonds/Q\ diamonds.png);
+}
+.preset__diamondsJ {
+    background-image: url(../img/diamonds/J\ diamonds.png);
+}
+.preset__diamonds10 {
+    background-image: url(../img/diamonds/10\ diamonds.png);
+}
+.preset__diamonds9 {
+    background-image: url(../img/diamonds/9\ diamonds.png);
+}
+.preset__diamonds8 {
+    background-image: url(../img/diamonds/8\ diamonds.png);
+}
+.preset__diamonds7 {
+    background-image: url(../img/diamonds/7\ diamonds.png);
+}
+.preset__diamonds6 {
+    background-image: url(../img/diamonds/6\ diamonds.png);
+}
+.preset__clubsA {
+    background-image: url(../img/clubs/A\ clubs.png);
+}
+.preset__clubsK {
+    background-image: url(../img/clubs/K\ clubs.png);
+}
+.preset__clubsQ {
+    background-image: url(../img/clubs/Q\ clubs.png);
+}
+.preset__clubsJ {
+    background-image: url(../img/clubs/J\ clubs.png);
+}
+.preset__clubs10 {
+    background-image: url(../img/clubs/10\ clubs.png);
+}
+.preset__clubs9 {
+    background-image: url(../img/clubs/9\ clubs.png);
+}
+.preset__clubs8 {
+    background-image: url(../img/clubs/8\ clubs.png);
+}
+.preset__clubs7 {
+    background-image: url(../img/clubs/7\ clubs.png);
+}
+.preset__clubs6 {
+    background-image: url(../img/clubs/6\ clubs.png);
 }
 
 @keyframes cards__visual {

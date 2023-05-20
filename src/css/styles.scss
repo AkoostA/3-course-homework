@@ -12,7 +12,7 @@
 @font-face {
     font-family: "StratosSkyeng";
     font-style: normal;
-    src: url(../../fonts/stratosskyeng-regular.otf);
+    src: url(../fonts/stratosskyeng-regular.otf);
 }
 
 * {
@@ -141,14 +141,14 @@ body {
 
     &__cards {
         display: grid;
-        grid-template-columns: repeat(9, 1fr);
+        grid-template-columns: repeat(6, 1fr);
         gap: 15px;
     }
 
     &__cards-button {
         width: 95px;
         height: 133px;
-        background-image: url(../../img/рубашка.jpg);
+        background-image: url(../img/рубашка.jpg);
         border-radius: 4px;
         border-style: none;
         &:hover {
@@ -159,6 +159,153 @@ body {
 
 .-button-active {
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+}
+
+.preset {
+    &__spadesA {
+        background-image: url(../img/spades/A\ spades.png);
+    }
+
+    &__spadesK {
+        background-image: url(../img/spades/K\ spades.png);
+    }
+
+    &__spadesQ {
+        background-image: url(../img/spades/Q\ spades.png);
+    }
+
+    &__spadesJ {
+        background-image: url(../img/spades/J\ spades.png);
+    }
+
+    &__spades10 {
+        background-image: url(../img/spades/10\ spades.png);
+    }
+
+    &__spades9 {
+        background-image: url(../img/spades/9\ spades.png);
+    }
+
+    &__spades8 {
+        background-image: url(../img/spades/8\ spades.png);
+    }
+
+    &__spades7 {
+        background-image: url(../img/spades/7\ spades.png);
+    }
+
+    &__spades6 {
+        background-image: url(../img/spades/6\ spades.png);
+    }
+
+    &__heartsA {
+        background-image: url(../img/hearts/A\ hearts.png);
+    }
+
+    &__heartsK {
+        background-image: url(../img/hearts/K\ hearts.png);
+    }
+
+    &__heartsQ {
+        background-image: url(../img/hearts/Q\ hearts.png);
+    }
+
+    &__heartsJ {
+        background-image: url(../img/hearts/J\ hearts.png);
+    }
+
+    &__hearts10 {
+        background-image: url(../img/hearts/10\ hearts.png);
+    }
+
+    &__hearts9 {
+        background-image: url(../img/hearts/9\ hearts.png);
+    }
+
+    &__hearts8 {
+        background-image: url(../img/hearts/8\ hearts.png);
+    }
+
+    &__hearts7 {
+        background-image: url(../img/hearts/7\ hearts.png);
+    }
+
+    &__hearts6 {
+        background-image: url(../img/hearts/6\ hearts.png);
+    }
+
+    &__diamondsA {
+        background-image: url(../img/diamonds/A\ diamonds.png);
+    }
+
+    &__diamondsK {
+        background-image: url(../img/diamonds/K\ diamonds.png);
+    }
+
+    &__diamondsQ {
+        background-image: url(../img/diamonds/Q\ diamonds.png);
+    }
+
+    &__diamondsJ {
+        background-image: url(../img/diamonds/J\ diamonds.png);
+    }
+
+    &__diamonds10 {
+        background-image: url(../img/diamonds/10\ diamonds.png);
+    }
+
+    &__diamonds9 {
+        background-image: url(../img/diamonds/9\ diamonds.png);
+    }
+
+    &__diamonds8 {
+        background-image: url(../img/diamonds/8\ diamonds.png);
+    }
+
+    &__diamonds7 {
+        background-image: url(../img/diamonds/7\ diamonds.png);
+    }
+
+    &__diamonds6 {
+        background-image: url(../img/diamonds/6\ diamonds.png);
+    }
+
+    &__clubsA {
+        background-image: url(../img/clubs/A\ clubs.png);
+    }
+
+    &__clubsK {
+        background-image: url(../img/clubs/K\ clubs.png);
+    }
+
+    &__clubsQ {
+        background-image: url(../img/clubs/Q\ clubs.png);
+    }
+
+    &__clubsJ {
+        background-image: url(../img/clubs/J\ clubs.png);
+    }
+
+    &__clubs10 {
+        background-image: url(../img/clubs/10\ clubs.png);
+    }
+
+    &__clubs9 {
+        background-image: url(../img/clubs/9\ clubs.png);
+    }
+
+    &__clubs8 {
+        background-image: url(../img/clubs/8\ clubs.png);
+    }
+
+    &__clubs7 {
+        background-image: url(../img/clubs/7\ clubs.png);
+    }
+
+    &__clubs6 {
+        background-image: url(../img/clubs/6\ clubs.png);
+    }
 }
 
 @keyframes cards__visual {
