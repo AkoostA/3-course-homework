@@ -1,7 +1,6 @@
 /* eslint-disable prettier/prettier */
 
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
@@ -9,7 +8,7 @@ module.exports = {
     entry: "./src/index.js",
     mode: process.env.NODE_ENV === "production" ? "production" : "development",
     output: {
-        filename: "bundle.js",
+        filename: "main.js",
         clean: true,
     },
     module: {
@@ -28,19 +27,10 @@ module.exports = {
             },
         ],
     },
-    devtool:
-        process.env.NODE_ENV === "production"
-            ? false
-            : "source-map",
+    devtool: process.env.NODE_ENV === "production" ? false : "source-map",
     plugins: [
-        new CopyPlugin({
-            patterns: [
-                { from: "./src/img", to: "./src/img" },
-                { from: "./src/css", to: "./src/css/styles.css" },
-                { from: "./src/fonts", to: "./src/fonts" },
-            ],
-        }),
         new HtmlWebpackPlugin({
+            filename: "main.html",
             template: "./index.html",
         }),
         new MiniCssExtractPlugin(),
