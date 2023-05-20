@@ -30,7 +30,6 @@ module.exports = {
     devtool: process.env.NODE_ENV === "production" ? false : "source-map",
     plugins: [
         new HtmlWebpackPlugin({
-            filename: "main.html",
             template: "./index.html",
         }),
         new MiniCssExtractPlugin(),
