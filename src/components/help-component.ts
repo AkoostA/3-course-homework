@@ -50,6 +50,7 @@ function startTime() {
                 min = 0;
             }
         }
+        return;
     }
 
     function add() {
@@ -58,10 +59,12 @@ function startTime() {
             (min > 9 ? min : "0" + min) + ":" + (sec > 9 ? sec : "0" + sec);
         globalThis.timer = timerElement!.innerHTML;
         timer();
+        return;
     }
 
     function timer() {
         t = setTimeout(add, 1000);
+        return;
     }
 
     timer();
