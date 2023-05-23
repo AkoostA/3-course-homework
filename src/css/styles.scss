@@ -87,6 +87,38 @@ body {
             border-style: outset;
         }
     }
+
+    &__win {
+        margin-top: 30px;
+        height: 96px;
+        width: 96px;
+        background-image: url(../img/win.svg);
+    }
+
+    &__lose {
+        margin-top: 30px;
+        height: 96px;
+        width: 96px;
+        background-image: url(../img/lose.svg);
+    }
+
+    &__title-win {
+        color: #004980;
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    &__text {
+        color: #000000;
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    &__timer {
+        color: #000000;
+        font-size: 64px;
+        line-height: 72px;
+    }
 }
 
 .game {

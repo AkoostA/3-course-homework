@@ -7,10 +7,8 @@
         "build": "cross-env NODE_ENV=production webpack",
         "start": "webpack-dev-server --open",
         "format": "prettier --write ./src/",
-        "lint:js": "eslint ./src/**/*.js",
         "lint:scss": "stylelint ./src/**/*.scss",
-        "prepare": "husky install",
-        "lint": "npm run format && npm run lint:js && npm run lint:scss"
+        "lint": "npm run format && npm run lint:scss"
     },
     "keywords": [],
     "author": "AkoostA",
@@ -24,7 +22,6 @@
         "eslint-config-prettier": "^8.8.0",
         "eslint-plugin-prettier": "^4.2.1",
         "html-webpack-plugin": "^5.5.1",
-        "husky": "^8.0.3",
         "mini-css-extract-plugin": "^2.7.5",
         "postcss-scss": "^4.0.6",
         "prettier": "^2.8.8",
@@ -35,6 +32,8 @@
         "stylelint-config-standard-scss": "^6.0.0",
         "stylelint-prettier": "^2.0.0",
         "stylelint-scss": "^5.0.0",
+        "ts-loader": "^9.4.2",
+        "typescript": "^5.0.4",
         "webpack": "^5.82.1",
         "webpack-cli": "^5.1.1",
         "webpack-dev-server": "^4.15.0"
