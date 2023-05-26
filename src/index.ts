@@ -1,7 +1,7 @@
 import "./css/styles.css";
 import { renderingDifficulty } from "./components/difficulty-component";
 
-type Card = {
+interface ICard {
     mainElement: HTMLElement | null;
     suit: Array<string>;
     rank: Array<string>;
@@ -11,9 +11,9 @@ type Card = {
     index: Number;
     timer: String;
     timerCheck: String;
-};
+}
 
-const globalThis: Card = {
+const globalThis: ICard = {
     mainElement: document.getElementById("main"),
     suit: ["spades", "hearts", "diamonds", "clubs"],
     rank: ["A", "K", "Q", "J", "10", "9", "8", "7", "6"],

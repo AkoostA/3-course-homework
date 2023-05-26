@@ -1,8 +1,8 @@
 const { it, expect, describe } = require("@jest/globals");
-import {
+const {
     randomSuitAndRank,
     randomButtonElements,
-} from "../src/components/help-component";
+} = require("../src/components/help-component");
 
 describe("Функции внутри модуля help-components", () => {
     it("Создает массив с рандомным наполнением на основе двух других и дублирует его", () => {
