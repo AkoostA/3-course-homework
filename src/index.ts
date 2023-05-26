@@ -10,6 +10,7 @@ type Card = {
     selectedCard: string | undefined;
     index: Number;
     timer: String;
+    timerCheck: String;
 };
 
 const globalThis: Card = {
@@ -21,6 +22,7 @@ const globalThis: Card = {
     selectedCard: "clear",
     index: 0,
     timer: "",
+    timerCheck: "on",
 };
 
 renderingDifficulty();

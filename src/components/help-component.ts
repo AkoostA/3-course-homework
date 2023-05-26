@@ -39,7 +39,7 @@ function startTime() {
     const timerElement = document.getElementById("timer");
     let sec = 0;
     let min = 0;
-    let t;
+    let t: any;
 
     function tick() {
         sec++;
@@ -54,6 +54,10 @@ function startTime() {
     }
 
     function add() {
+        if (globalThis.timerCheck === "on") {
+            clearTimeout(t);
+            return;
+        }
         tick();
         timerElement!.innerHTML =
             (min > 9 ? min : "0" + min) + ":" + (sec > 9 ? sec : "0" + sec);
