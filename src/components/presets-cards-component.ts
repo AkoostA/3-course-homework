@@ -1,5 +1,5 @@
 import { renderingDifficulty } from "./difficulty-component";
-import { globalThis } from "../index";
+import { globalThis } from "./global";
 import { renderingWinGame, renderingloseGame } from "./end-game-component";
 import {
     randomSuitAndRank,
@@ -23,7 +23,7 @@ const gameTitleElement = `
 function renderingPresetsCards() {
     switch (globalThis.difficulty) {
         case "easy":
-            randomSuitAndRank(3);
+            globalThis.randomPreset = randomSuitAndRank(3);
             globalThis.mainElement!.innerHTML = `
             <div class="game">
                 ${gameTitleElement}
@@ -34,7 +34,7 @@ function renderingPresetsCards() {
             `;
             break;
         case "average":
-            randomSuitAndRank(6);
+            globalThis.randomPreset = randomSuitAndRank(6);
             globalThis.mainElement!.innerHTML = `
             <div class="game">
                 ${gameTitleElement}
@@ -45,7 +45,7 @@ function renderingPresetsCards() {
             `;
             break;
         case "hard":
-            randomSuitAndRank(9);
+            globalThis.randomPreset = randomSuitAndRank(9);
             globalThis.mainElement!.innerHTML = `
             <div class="game">
                 ${gameTitleElement}

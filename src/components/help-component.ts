@@ -1,4 +1,4 @@
-import { globalThis } from "../index";
+import { globalThis } from "./global";
 
 function randomSuitAndRank(numb: number) {
     const randomPreset = new Array();
@@ -16,8 +16,8 @@ function randomSuitAndRank(numb: number) {
         globalThis.suit.splice(randomSuit, 1);
         globalThis.rank.splice(randomRank, 1);
     }
-    globalThis.randomPreset = [...randomPreset, ...randomPreset];
-    return;
+
+    return [...randomPreset, ...randomPreset];
 }
 
 function randomButtonElements(numb: number) {
