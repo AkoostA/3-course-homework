@@ -1,5 +1,5 @@
 import { renderingDifficulty } from "./difficulty-component";
-import { globalThis } from "../index";
+import { globalThis } from "./global";
 import { renderingWinGame, renderingloseGame } from "./end-game-component";
 import {
     randomSuitAndRank,
@@ -23,7 +23,7 @@ const gameTitleElement = `
 function renderingPresetsCards() {
     switch (globalThis.difficulty) {
         case "easy":
-            randomSuitAndRank(3);
+            globalThis.randomPreset = randomSuitAndRank(3);
             globalThis.mainElement!.innerHTML = `
             <div class="game">
                 ${gameTitleElement}
@@ -34,7 +34,7 @@ function renderingPresetsCards() {
             `;
             break;
         case "average":
-            randomSuitAndRank(6);
+            globalThis.randomPreset = randomSuitAndRank(6);
             globalThis.mainElement!.innerHTML = `
             <div class="game">
                 ${gameTitleElement}
@@ -45,7 +45,7 @@ function renderingPresetsCards() {
             `;
             break;
         case "hard":
-            randomSuitAndRank(9);
+            globalThis.randomPreset = randomSuitAndRank(9);
             globalThis.mainElement!.innerHTML = `
             <div class="game">
                 ${gameTitleElement}
@@ -63,6 +63,7 @@ function renderingPresetsCards() {
 
     againButton!.addEventListener("click", () => {
         globalThis.selectedCard = "clear";
+        globalThis.timerCheck = "on";
         renderingDifficulty();
     });
 
@@ -72,7 +73,6 @@ function renderingPresetsCards() {
 function checkButtonPresets() {
     const buttonElements = document.querySelectorAll(".game__cards-button");
     let cardIndex = 0;
-    let timerCheck = false;
     setTimeout(() => {
         for (const buttonElement of buttonElements as any) {
             if (buttonElement instanceof HTMLElement) {
@@ -91,10 +91,10 @@ function checkButtonPresets() {
                     );
                     switch (globalThis.selectedCard) {
                         case "clear":
-                            if (!timerCheck) {
+                            if (globalThis.timerCheck === "on") {
+                                globalThis.timerCheck = "off";
                                 startTime();
                             }
-                            timerCheck = true;
                             globalThis.selectedCard =
                                 buttonElement.dataset.preset;
                             buttonElement.dataset.preset = "open";
@@ -105,7 +105,7 @@ function checkButtonPresets() {
                         case buttonElement.dataset.preset:
                             cardIndex = cardIndex + 2;
                             if (globalThis.index === cardIndex) {
-                                timerCheck = false;
+                                globalThis.timerCheck = "on";
                                 renderingWinGame();
                                 return;
                             }
@@ -113,7 +113,7 @@ function checkButtonPresets() {
                             buttonElement.dataset.preset = "open";
                             break;
                         default:
-                            timerCheck = false;
+                            globalThis.timerCheck = "on";
                             renderingloseGame();
                             break;
                     }
