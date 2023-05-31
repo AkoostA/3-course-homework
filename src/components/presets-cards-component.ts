@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { renderingDifficulty } from "./difficulty-component";
 import { globalThis } from "./global";
 import { renderingWinGame, renderingloseGame } from "./end-game-component";
@@ -74,6 +76,8 @@ function checkButtonPresets() {
     const buttonElements = document.querySelectorAll(".game__cards-button");
     let cardIndex = 0;
     setTimeout(() => {
+        globalThis.timerCheck = "off";
+        startTime();
         for (const buttonElement of buttonElements as any) {
             if (buttonElement instanceof HTMLElement) {
                 buttonElement.classList.remove(
@@ -85,16 +89,12 @@ function checkButtonPresets() {
         for (const buttonElement of buttonElements as any) {
             if (buttonElement instanceof HTMLElement) {
                 buttonElement.addEventListener("click", () => {
-                    buttonElement.classList.add("-button-active");
+                    buttonElement.classList.add("button-active");
                     buttonElement.classList.add(
                         `preset__${buttonElement.dataset.preset}`
                     );
                     switch (globalThis.selectedCard) {
                         case "clear":
-                            if (globalThis.timerCheck === "on") {
-                                globalThis.timerCheck = "off";
-                                startTime();
-                            }
                             globalThis.selectedCard =
                                 buttonElement.dataset.preset;
                             buttonElement.dataset.preset = "open";
