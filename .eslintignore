@@ -1,4 +1,3 @@
-node_modules/
-dist/
-**/*test.js/
-**/*style.css/
+**/node_modules
+**/dist
+**/.css

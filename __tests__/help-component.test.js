@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-env node */
 const { it, expect, describe } = require("@jest/globals");
 const {
     randomSuitAndRank,

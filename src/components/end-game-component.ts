@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { globalThis } from "./global";
 import { renderingDifficulty } from "./difficulty-component";
 

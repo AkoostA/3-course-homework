@@ -5,9 +5,9 @@ interface ICard {
     randomPreset: Array<string>;
     difficulty: string;
     selectedCard: string | undefined;
-    index: Number;
-    timer: String;
-    timerCheck: String;
+    index: number;
+    timer: string;
+    timerCheck: string;
 }
 
 const globalThis: ICard = {

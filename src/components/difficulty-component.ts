@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { renderingPresetsCards } from "./presets-cards-component";
 import { globalThis } from "./global";
 
@@ -28,9 +30,9 @@ function checkButtonDifficulty() {
     for (const chooseButtonElement of chooseButtonElements as any) {
         chooseButtonElement.addEventListener("click", () => {
             for (const chooseButtonElement of chooseButtonElements as any) {
-                chooseButtonElement.classList.remove("-button-active");
+                chooseButtonElement.classList.remove("button-active");
             }
-            chooseButtonElement.classList.add("-button-active");
+            chooseButtonElement.classList.add("button-active");
             switch (chooseButtonElement.textContent) {
                 case "1":
                     globalThis.difficulty = "easy";

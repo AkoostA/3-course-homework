@@ -1,7 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+
 import { globalThis } from "./global";
 
 function randomSuitAndRank(numb: number) {
-    const randomPreset = new Array();
+    const randomPreset = [];
     for (let i = 0; i < numb; i++) {
         if (globalThis.suit.length === 0) {
             globalThis.suit = ["spades", "hearts", "diamonds", "clubs"];
@@ -22,7 +25,7 @@ function randomSuitAndRank(numb: number) {
 
 function randomButtonElements(numb: number) {
     globalThis.index = numb;
-    let randomButtonElement = new Array();
+    const randomButtonElement = [];
     for (let i = 0; i < numb; i++) {
         const randomI = Math.floor(
             Math.random() * globalThis.randomPreset.length
